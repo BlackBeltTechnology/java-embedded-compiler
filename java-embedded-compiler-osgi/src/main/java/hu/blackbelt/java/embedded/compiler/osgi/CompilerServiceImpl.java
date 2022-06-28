@@ -47,7 +47,7 @@ public class CompilerServiceImpl implements CompilerService {
             cardinality = ReferenceCardinality.MULTIPLE,
             policy = ReferencePolicy.DYNAMIC)
     void addCompilerFactory(CompilerFactory compilerFactory, Map<String, Object> properties) {
-        String type = (String) properties.getOrDefault("compileType", compilerFactory.getClass().toString());
+        String type = compilerFactory.getName();
         Integer rank = (Integer) properties.getOrDefault(Constants.SERVICE_RANKING, 0);
         synchronized (compilerFactories) {
             compilerFactories.put(new ServiceKey(type, rank), compilerFactory);
@@ -55,7 +55,7 @@ public class CompilerServiceImpl implements CompilerService {
     }
 
     void removeCompilerFactory(CompilerFactory compilerFactory, Map<String, Object> properties) {
-        String type = (String) properties.getOrDefault("compileType", compilerFactory.getClass().toString());
+        String type = compilerFactory.getName();
         Integer rank = (Integer) properties.getOrDefault(Constants.SERVICE_RANKING, 0);
         synchronized (compilerFactories) {
             compilerFactories.remove(new ServiceKey(type, rank));

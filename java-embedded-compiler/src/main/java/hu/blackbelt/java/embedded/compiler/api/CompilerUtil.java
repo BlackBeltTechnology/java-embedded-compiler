@@ -30,14 +30,15 @@ public final class CompilerUtil {
 
         //JavaCompiler compiler = CompilerFactory.getCompiler(compilerContext);
         JavaCompiler compiler = null;
+        CompilerFactory compilerFactory = null;
 
         if (compilerContext.getCompilerFactory() != null) {
-           compiler = compilerContext.getCompilerFactory().getCompiler();
+            compilerFactory = compilerContext.getCompilerFactory();
         } else {
             ServiceLoader<CompilerFactory> loader = ServiceLoader.load(CompilerFactory.class);
-            CompilerFactory compilerFactory = loader.findFirst().orElseThrow(() -> new IllegalStateException("Could not found compiler"));
-            compiler = compilerFactory.getCompiler();
+            compilerFactory = loader.findFirst().orElseThrow(() -> new IllegalStateException("Could not found compiler"));
         }
+        compiler = compilerFactory.getCompiler();
 
         try (StandardJavaFileManager standardJavaFileManager = compiler.getStandardFileManager(null, null, null)) {
 
@@ -75,9 +76,7 @@ public final class CompilerUtil {
                 options.add("-proc:none");
             }
             options.addAll(COMMON_ARGS);
-            if (compilerContext.isPreferEclipseCompiler()) {
-                options.add("-warn:none");
-            }
+            options.addAll(compilerFactory.getExtraArgs());
 
             Boolean result;
             CompilationTask task = compiler.getTask(new StringWriter(), delegatedFileManager, diagnostics, options,

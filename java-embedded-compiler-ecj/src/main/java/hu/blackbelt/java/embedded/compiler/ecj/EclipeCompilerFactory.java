@@ -6,6 +6,8 @@ import org.osgi.service.component.annotations.Component;
 
 import javax.tools.*;
 import java.io.Writer;
+import java.util.ArrayList;
+import java.util.List;
 
 @Component(property = {
         "compileType=eclipse"
@@ -18,5 +20,17 @@ public class EclipeCompilerFactory implements CompilerFactory {
                 }
             };
         return compiler;
+    }
+
+    @Override
+    public String getName() {
+        return "eclipse";
+    }
+
+    @Override
+    public List<String> getExtraArgs() {
+        List options = new ArrayList();
+        options.add("-warn:none");
+        return options;
     }
 }
