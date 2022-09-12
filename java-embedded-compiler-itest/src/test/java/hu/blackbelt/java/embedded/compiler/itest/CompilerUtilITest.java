@@ -1,4 +1,4 @@
-package hu.blackbelt.judo.framework.compiler.api;
+package hu.blackbelt.java.embedded.compiler.itest;
 
 import com.google.common.collect.ImmutableList;
 import hu.blackbelt.java.embedded.compiler.api.FullyQualifiedName;
@@ -33,7 +33,7 @@ import java.util.stream.Stream;
 import static hu.blackbelt.java.embedded.compiler.api.CompilerContext.compilerContextBuilder;
 import static hu.blackbelt.java.embedded.compiler.api.CompilerUtil.compile;
 import static hu.blackbelt.java.embedded.compiler.api.CompilerUtil.compileAsClass;
-import static hu.blackbelt.judo.meta.esm.osgi.itest.KarafFeatureProvider.karafConfig;
+import static hu.blackbelt.java.embedded.compiler.itest.KarafFeatureProvider.karafConfig;
 import static java.util.stream.StreamSupport.stream;
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.Matchers.containsInAnyOrder;
