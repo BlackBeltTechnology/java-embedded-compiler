@@ -39,7 +39,7 @@
         <slf4j-version>1.7.25</slf4j-version>
         <junit-version>4.13.2</junit-version>
 
-        <karaf-version>4.3.5</karaf-version>
+        <karaf-version>4.4.1</karaf-version>
 
         <!--suppress UnresolvedMavenProperty -->
         <logback-test-config>${maven.multiModuleProjectDirectory}/logback-test.xml</logback-test-config>
