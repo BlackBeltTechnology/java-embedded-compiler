@@ -1,2 +1,17 @@
-# java-embedded-compiler
+= java-embedded-compiler
 
+image::https://github.com/BlackBeltTechnology/java-embedded-compiler/actions/workflows/build.yml/badge.svg?branch=develop[link="https://github.com/BlackBeltTechnology/java-embedded-compiler/actions/workflows/build.yml" float="center"]
+
+== Introduction
+
+This is a Java compiler API which can be used for onthe fly generated class compilation and classloading in
+standard java and OSGi environment. It support JDK supplied API and ECJ (Eclipse) compiler too.
+
+== Contributing to the project
+
+Everyone is welcome to contribute to java-embedded-compiler! As a starter, please read the corresponding link:CONTRIBUTING.adoc[CONTRIBUTING] guide for details!
+
+
+== License
+
+This project is licensed under the https://www.apache.org/licenses/LICENSE-2.0[Apache License 2.0].
