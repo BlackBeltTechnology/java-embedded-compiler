@@ -6,8 +6,6 @@
 
     <repository>mvn:hu.blackbelt.karaf.features/google-features/${google-karaf-features-version}/xml/features</repository>
     <feature name="test"  version="1" description="Base test features" install="true">
-        <feature prerequisite="true">wrap</feature>
-        <feature prerequisite="true">shell</feature>
         <feature prerequisite="true">scr</feature>
         <feature>guava-27</feature>
     </feature>
