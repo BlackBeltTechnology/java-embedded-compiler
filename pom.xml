@@ -10,7 +10,7 @@
     <description>Parent project of Embedded compiler.</description>
 
     <properties>
-        <revision>1.0.0-SNAPSHOT</revision>
+        <revision>1.0.0</revision>
         <maven>3.8.3</maven>
 
         <project-shortname>java-embedded-compiler</project-shortname>
