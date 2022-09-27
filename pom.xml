@@ -55,7 +55,7 @@
         <sonar.java.source>${java.version}</sonar.java.source>
         <jacoco.version>0.8.8</jacoco.version>
 
-        <google-karaf-features-version>1.0.7</google-karaf-features-version>
+        <karaf-features-version>2.0.0.20220914_195648_137a7afe_feature_JNG_3834_PrepareRelease</karaf-features-version>
     </properties>
 
     <url>http://github.com/${project-repositoryId}</url>
@@ -385,6 +385,12 @@
                 </plugin>
 
                 <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${jacoco.version}</version>
+                </plugin>
+
+                <plugin>
                     <groupId>org.sonarsource.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
                     <version>${sonar-maven-plugin-version}</version>
@@ -406,7 +412,6 @@
                             --add-opens java.base/java.util=ALL-UNNAMED
                             --add-opens java.base/java.time=ALL-UNNAMED
                         </argLine>
-                        <trimStackTrace>false</trimStackTrace>
                     </configuration>
                 </plugin>
 
@@ -495,6 +500,7 @@
                             <serverId>ossrh</serverId>
                             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                            <stagingProgressTimeoutMinutes>15</stagingProgressTimeoutMinutes>
                         </configuration>
                     </plugin>
                 </plugins>
