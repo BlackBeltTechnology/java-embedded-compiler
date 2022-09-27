@@ -55,7 +55,7 @@
         <sonar.java.source>${java.version}</sonar.java.source>
         <jacoco.version>0.8.8</jacoco.version>
 
-        <google-karaf-features-version>1.0.7</google-karaf-features-version>
+        <karaf-features-version>2.0.0</karaf-features-version>
     </properties>
 
     <url>http://github.com/${project-repositoryId}</url>
@@ -72,6 +72,14 @@
         </developerConnection>
         <url>http://github.com/${project-repositoryId}</url>
     </scm>
+
+    <licenses>
+        <license>
+            <name>The Apache Software License, Version 2.0</name>
+            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
 
     <developers>
         <developer>
@@ -385,6 +393,12 @@
                 </plugin>
 
                 <plugin>
+                    <groupId>org.jacoco</groupId>
+                    <artifactId>jacoco-maven-plugin</artifactId>
+                    <version>${jacoco.version}</version>
+                </plugin>
+
+                <plugin>
                     <groupId>org.sonarsource.scanner.maven</groupId>
                     <artifactId>sonar-maven-plugin</artifactId>
                     <version>${sonar-maven-plugin-version}</version>
@@ -406,7 +420,6 @@
                             --add-opens java.base/java.util=ALL-UNNAMED
                             --add-opens java.base/java.time=ALL-UNNAMED
                         </argLine>
-                        <trimStackTrace>false</trimStackTrace>
                     </configuration>
                 </plugin>
 
@@ -495,6 +508,7 @@
                             <serverId>ossrh</serverId>
                             <nexusUrl>https://oss.sonatype.org/</nexusUrl>
                             <autoReleaseAfterClose>true</autoReleaseAfterClose>
+                            <stagingProgressTimeoutMinutes>15</stagingProgressTimeoutMinutes>
                         </configuration>
                     </plugin>
                 </plugins>
