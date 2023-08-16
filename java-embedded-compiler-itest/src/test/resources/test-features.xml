@@ -27,7 +27,7 @@
     <repository>mvn:hu.blackbelt.karaf.features/google-features/${karaf-features-version}/xml/features</repository>
     <feature name="test"  version="1" description="Base test features" install="true">
         <feature prerequisite="true">scr</feature>
-        <feature>guava-27</feature>
+        <feature>guava-31</feature>
     </feature>
 
 </features>
