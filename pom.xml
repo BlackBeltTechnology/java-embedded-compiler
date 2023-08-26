@@ -19,8 +19,8 @@
         <osgi-default-import>
             org.osgi.framework;version="[1.8,2.0)",
             !lombok,
-            org.slf4j;version="[1.6,2)",
-            javax.annotation;version="[1.0,2)"
+            javax.annotation;version="[1.0,2)",
+            org.slf4j;version="[1.6,3)",
         </osgi-default-import>
 
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -36,7 +36,7 @@
         <mockito-version>4.8.0</mockito-version>
 
         <lombok-version>1.18.24</lombok-version>
-        <slf4j-version>1.7.25</slf4j-version>
+        <slf4j-version>2.0.7</slf4j-version>
         <junit-version>4.13.2</junit-version>
 
         <karaf-version>4.4.3</karaf-version>
