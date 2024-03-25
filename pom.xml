@@ -140,12 +140,6 @@
             </dependency>
 
             <dependency>
-                <groupId>hu.blackbelt</groupId>
-                <artifactId>structured-map-proxy</artifactId>
-                <version>${structured-map-proxy-version}</version>
-            </dependency>
-
-            <dependency>
                 <groupId>org.osgi</groupId>
                 <artifactId>osgi.core</artifactId>
                 <version>${osgi-version}</version>
