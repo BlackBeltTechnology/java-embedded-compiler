@@ -39,7 +39,7 @@
         <slf4j-version>2.0.7</slf4j-version>
         <junit-version>4.13.2</junit-version>
 
-        <karaf-version>4.4.3</karaf-version>
+        <karaf-version>4.4.5</karaf-version>
 
         <!--suppress UnresolvedMavenProperty -->
         <logback-test-config>${maven.multiModuleProjectDirectory}/logback-test.xml</logback-test-config>
@@ -55,7 +55,7 @@
         <sonar.java.source>${java.version}</sonar.java.source>
         <jacoco.version>0.8.8</jacoco.version>
 
-        <karaf-features-version>2.0.2.20230914_091647_cbb59ce0_develop</karaf-features-version>
+        <karaf-features-version>2.0.2.20240410_083849_8b6fbfb2_develop</karaf-features-version>
     </properties>
 
     <url>http://github.com/${project-repositoryId}</url>
