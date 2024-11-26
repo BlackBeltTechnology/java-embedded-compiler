@@ -56,7 +56,7 @@
         <sonar.java.source>${java.version}</sonar.java.source>
         <jacoco.version>0.8.12</jacoco.version>
 
-        <karaf-features-version>2.0.2.20240410_083849_8b6fbfb2_develop</karaf-features-version>
+        <karaf-features-version>2.0.2.20241126_010802_125d5050_feature_JNG_5995_UpdateEclipse</karaf-features-version>
     </properties>
 
     <url>http://github.com/${project-repositoryId}</url>
