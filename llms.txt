@@ -33,6 +33,14 @@ Key facts:
 - [java-embedded-compiler-itest/pom.xml](java-embedded-compiler-itest/pom.xml): Karaf 4.4.7 + Pax Exam integration tests covering all compilation modes for both compiler backends
 - [java-embedded-compiler-reports/pom.xml](java-embedded-compiler-reports/pom.xml): JaCoCo aggregate coverage report across all modules
 
+## Used by
+
+- [judo-platform](../../runtime/judo-platform): runtime/judo-platform
+- [judo-runtime-core-esm-itest](../../runtime/judo-runtime-core-esm-itest): runtime/judo-runtime-core-esm-itest
+- [judo-services](../../runtime/judo-services): runtime/judo-services
+- [judo-tatami](../../runtime/judo-tatami): runtime/judo-tatami
+- [judo-tatami-base](../../runtime/judo-tatami-base): runtime/judo-tatami-base
+
 ## Optional
 
 - [.github/workflows/build.yml](.github/workflows/build.yml): GitHub Actions CI/CD pipeline (build, test, deploy, tag, release)
